@@ -1,24 +1,25 @@
 <?php
 
-
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index(){
-        return 'Bu Userlarni Royhati';
-    }
-
-    public function show($user){
-        return 'Siz tanlagan User ' . $user;
-    }
-    public function create(){
-   return view('users.create');
-    }
-    public function edit($user_id){
-      return  $user_id . ' ni ozgatirish';
-    }
+   public function index()
+  {
+    return 'Royhatlar';
+  }
+  public function show($user)
+  {
+   return 'sizning useringiz ' . $user;
+  }
+  public function create()
+  {
+    return view('test');
+  }
+  public function edit($id_user)
+  {
+  return $id_user . ' sizning useringiz';
+  }
 }
