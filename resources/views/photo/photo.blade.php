@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Salom</h1>
+    <h1>name: {{$name}}</h1>
+<h3>id: {{$id}}</h13>
 </body>
 </html>

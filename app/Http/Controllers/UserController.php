@@ -6,29 +6,24 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-   public function index()
-  {
-    return 'Royhatlar';
-  }
-  public function show($user)
-  {
+    public function index(){
+        // return response('Bu Userlar royhati', 200, ['X-oly-s' => 'X-oly-Ot']);
+        return redirect('users/create');
+    }
 
-    
-
-    $user += 1000;
-   return view('users.show')->with( 'name', 'Xasanov')->with('id', $user);
-
-  }
-  public function store(Request $request)
+    public function store(Request $request)
   {
-    dd($request->name);
+    dd($request->all());
   }
   public function create()
   {
     return view('users.create');
   }
-  public function edit($id_user)
+  public function show($user, $isim)
   {
-  return $id_user . ' sizning useringiz';
+    return view('photo.photo')->with('name', $isim )->with('id', $user);
+  }
+  public function edit($user_id){
+  return  $user_id . ' id ozgatirildi';
   }
 }
