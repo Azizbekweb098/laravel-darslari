@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class PhotoController extends Controller
 {
-    //
+    public function photo(){
+        return view('photo.photo');
+    }
 }

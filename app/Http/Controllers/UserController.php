@@ -12,11 +12,20 @@ class UserController extends Controller
   }
   public function show($user)
   {
-   return 'sizning useringiz ' . $user;
+
+    
+
+    $user += 1000;
+   return view('users.show')->with( 'name', 'Xasanov')->with('id', $user);
+
+  }
+  public function store(Request $request)
+  {
+    dd($request->name);
   }
   public function create()
   {
-    return view('test');
+    return view('users.create');
   }
   public function edit($id_user)
   {
