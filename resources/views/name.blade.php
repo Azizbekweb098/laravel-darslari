@@ -6,7 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>name: {{$name}}</h1>
-<h3>id: {{$id}}</h13>
+<div style="color: white">
+    @foreach ($records as $record)
+        <p>This is record {{ $record}} - {{$loop->remaining}}</p>
+    @endforeach
+</div>
 </body>
 </html>
